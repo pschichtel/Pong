@@ -1,6 +1,6 @@
 package de.cubeinfection.pong.entity;
 
-import de.cubeinfection.pong.entity.form.Form;
+import de.cubeinfection.pong.entity.shape.Shape;
 import de.cubeinfection.pong.position.Vector2;
 
 import java.awt.*;
@@ -11,7 +11,7 @@ public abstract class Entity
     private boolean valid = true;
     private Vector2 velocity = null;
     private Entity parent = null;
-    private Form form = null;
+    private Shape form = null;
 
     public void invalidate()
     {
@@ -28,12 +28,12 @@ public abstract class Entity
         this.parent = parent;
     }
 
-    public Form getForm()
+    public Shape getForm()
     {
         return form;
     }
 
-    public void setForm(Form form)
+    public void setForm(Shape form)
     {
         this.form = form;
     }
@@ -63,11 +63,15 @@ public abstract class Entity
         this.velocity = vec;
     }
 
+    public abstract void onCollide(Entity entity);
+
     public abstract void tick();
+
+    public abstract int getZIndex();
 
     public void draw(Graphics g)
     {
-        final Form form = this.getForm();
+        final de.cubeinfection.pong.entity.shape.Shape form = this.getForm();
         if (form != null)
         {
             form.draw(this.getPosition(), g);

@@ -1,6 +1,6 @@
 package de.cubeinfection.pong.entity;
 
-import de.cubeinfection.pong.entity.form.Rectangle;
+import de.cubeinfection.pong.entity.shape.Rectangle;
 import de.cubeinfection.pong.position.Vector2;
 
 import java.awt.*;
@@ -11,7 +11,7 @@ public class View extends Entity
     {
         this.setPosition(new Vector2(0, 0));
         this.setVelocity(new Vector2(0, 0));
-        this.setForm(new Rectangle(width, height));
+        this.setForm(new Rectangle(width, height, Color.BLACK));
     }
 
     @Override
@@ -19,6 +19,8 @@ public class View extends Entity
     {}
 
     @Override
-    public void draw(Graphics g)
-    {}
+    public int getZIndex()
+    {
+        return 0;
+    }
 }

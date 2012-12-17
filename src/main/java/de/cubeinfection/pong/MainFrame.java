@@ -16,10 +16,18 @@ public class MainFrame extends JFrame
         this.setTitle("Pong!");
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setContentPane(game);
+        this.setBackground(Color.MAGENTA);
     }
 
     public void startGame()
     {
         this.game.start();
+    }
+
+    @Override
+    public void dispose()
+    {
+        super.dispose();
+        this.game.stop();
     }
 }
