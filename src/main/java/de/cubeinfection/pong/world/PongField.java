@@ -13,9 +13,8 @@ public class PongField extends World
     @Override
     public void draw(Graphics2D g)
     {
-        g.setBackground(Color.MAGENTA);
-        g.setColor(Color.MAGENTA);
-        g.drawString("ABC", 30, 30);
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, this.getWidth(), this.getHeight());
         super.draw(g);
     }
 }
