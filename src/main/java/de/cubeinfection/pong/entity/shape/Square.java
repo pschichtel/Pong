@@ -1,6 +1,6 @@
 package de.cubeinfection.pong.entity.shape;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class Square extends Rectangle
 {

@@ -27,7 +27,7 @@ public class Vector2
         this.x = x;
         this.y = y;
     }
-    public double getX()
+    public float getX()
     {
         return this.x;
     }
@@ -37,7 +37,7 @@ public class Vector2
         return Math.round(this.x);
     }
 
-    public double getY()
+    public float getY()
     {
         return this.y;
     }

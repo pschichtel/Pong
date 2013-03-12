@@ -4,3 +4,5 @@ dist/
 .idea/
 *.iml
 lib/
+/nbproject/private/
+/build/
